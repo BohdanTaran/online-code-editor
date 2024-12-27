@@ -1,0 +1,16 @@
+header {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    gap: 8px;
+    box-shadow: var(--basic-shadow);
+
+    mat-icon {
+        font-size: 2.5rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+    }
+}
