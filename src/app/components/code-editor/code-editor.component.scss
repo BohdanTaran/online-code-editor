@@ -1,0 +1,21 @@
+@import "../../scss/utils/";
+
+.container {
+    width: 100%;
+    flex-wrap: wrap;
+    display: flex;
+    gap: 1rem;
+
+    @include tablet() {
+        min-height: calc(100vh - (72px + 3rem));
+    }
+
+    app-task-description,
+    app-code-editor-window {
+        flex: 1 1 100%;
+        
+        @include tablet() {
+            flex: 1 1 calc(50% - 1rem);
+        }
+    }
+}

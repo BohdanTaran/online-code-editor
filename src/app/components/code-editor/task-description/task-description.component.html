@@ -1,0 +1,30 @@
+<div class="container">
+
+    <div class="title">
+        <mat-icon color="primary">task_alt</mat-icon>
+        <h4>{{ task?.title }}</h4>
+    </div>
+
+    <div class="description">
+        <strong>Description:</strong>
+        <p>{{ task?.description }}</p>
+    </div>
+
+    <div class="instructions">
+        <strong>Instructions:</strong>
+        <ul>
+            @for (instruction of task?.instructions; track $index) {
+                <li>&bull; {{ instruction }}</li>
+            }
+        </ul>
+    </div>
+
+    <div class="hints">
+        <strong>Hints:</strong>
+        <ul>
+            @for (hint of task?.hints; track $index) {
+                <li>&bull; {{ hint }}</li>
+            }
+        </ul>
+    </div>
+</div>

@@ -2,16 +2,13 @@
   "tasks": [
     {
       "id": 1,
-      "title": "Write a program to output the string 'Hello, World!' to the console.",
-      "descriptionTitle": "Description:",
+      "title": "Hello my favorite world!",
       "description": "The task is to write a simple program that displays the text Hello, World! on the screen. This is a classic task that is often the starting point for learning programming. It helps to understand the basics of syntax of the chosen language, learn how to work with the output function and experience the first success in writing code.",
-      "instructionsTitle": "Instructions:",
       "instructions": [
         "Select a programming language: JavaScript or Python;",
         "Write your solution in the code editor window;",
-        "Click on the Start button and check the result."
+        "Click on the Run button and check the result."
       ],
-      "hintTitle": "Hints:",
       "hints": [
         "Make sure that the syntax of your code matches the programming language you have chosen;",
         "Use the console.log() function to display a string on the screen in JavaScript;",

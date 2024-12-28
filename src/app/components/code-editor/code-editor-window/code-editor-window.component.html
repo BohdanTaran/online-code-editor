@@ -1,0 +1,61 @@
+<div class="container">
+    <div class="code-container">
+
+        <div class="title">
+            <mat-icon color="primary">code</mat-icon>
+            <h4>Code</h4>
+        </div>
+
+        <form [formGroup]="selectLanguageForm">
+            <mat-form-field>
+                <mat-label>Programming language</mat-label>
+                <mat-select 
+                    required 
+                    [value]="selectLanguageForm.controls.language.value"
+                    [formControlName]="'language'"
+                >
+                    @for (language of languages; track language) {
+                        <mat-option [value]="language">{{ language }}</mat-option>
+                    }
+                </mat-select>
+            </mat-form-field>
+        </form>
+    
+        <ngx-monaco-editor
+            [options]="editorOptions"
+            [(ngModel)]="code"
+        >
+        </ngx-monaco-editor>
+    
+        <div class="buttons">
+            <button mat-flat-button color="primary" (click)="runCode()">Run</button>
+            <button mat-flat-button color="accent" (click)="cleanCode()">Reset</button>
+            <button mat-button (click)="showSolution()">
+                <mat-icon color="primary">lightbulb_2</mat-icon>
+                Show solution
+            </button>
+        </div>
+    </div>
+
+    <div class="result-container">
+        <div class="title">
+            <mat-icon color="primary">verified_user</mat-icon>
+            <h4>Result</h4>
+        </div>
+
+        @if (error) {
+            <div class="error-message">
+                <h3>{{ status }}</h3>
+                <pre>{{ error }}</pre>
+            </div>
+        }
+
+        @if (output) {
+            <div class="output-message">
+                <h3>{{ status }}</h3>
+                <pre>{{ output }}</pre>
+            </div>
+        }
+    </div>
+
+</div>
